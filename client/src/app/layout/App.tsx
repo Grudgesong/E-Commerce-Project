@@ -7,6 +7,7 @@ import {
   ThemeProvider,
   createTheme,
 } from "@mui/material";
+import { Outlet } from "react-router-dom";
 
 export default function App() {
   const [darkMode, setDarkMode] = useState(false);
@@ -28,7 +29,7 @@ export default function App() {
       <CssBaseline /> {/* Reset padding and margins */}
       <Header darkMode={darkMode} handleThemeChange={handleThemeChange} />
       <Container>
-        <Catalog />
+        <Outlet />
       </Container>
     </ThemeProvider>
   );
