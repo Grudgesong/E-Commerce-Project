@@ -4,7 +4,6 @@ import Register from "../../features/account/Register";
 import BasketPage from "../../features/basket/BasketPage";
 import Catalog from "../../features/catalog/Catalog";
 import ProductDetails from "../../features/catalog/ProductDetails";
-import CheckoutPage from "../../features/checkout/CheckoutPage";
 import ContactPage from "../../features/contact/ContactPage";
 import HomePage from "../../features/home/HomePage";
 import NotFound from "../errors/NotFound";
@@ -13,6 +12,7 @@ import App from "../layout/App";
 import { Navigate, createBrowserRouter } from "react-router-dom";
 import RequireAuth from "./RequireAuth";
 import Orders from "../../features/orders/Orders";
+import CheckoutWrapper from "../../features/checkout/CheckoutWrapper";
 
 export const router = createBrowserRouter([
   {
@@ -22,7 +22,7 @@ export const router = createBrowserRouter([
       {
         element: <RequireAuth />,
         children: [
-          { path: "checkout", element: <CheckoutPage /> },
+          { path: "checkout", element: <CheckoutWrapper /> },
           { path: "orders", element: <Orders /> },
         ],
       },

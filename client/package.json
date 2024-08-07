@@ -18,6 +18,8 @@
     "@mui/lab": "^5.0.0-alpha.170",
     "@mui/material": "^5.16.6",
     "@reduxjs/toolkit": "^2.2.6",
+    "@stripe/react-stripe-js": "^2.7.3",
+    "@stripe/stripe-js": "^4.1.0",
     "axios": "^1.7.2",
     "prop-types": "^15.8.1",
     "react": "^18.2.0",
