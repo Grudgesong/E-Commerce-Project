@@ -1,0 +1,27 @@
+# fly.toml app configuration file generated for sangraj-restore on 2024-08-12T20:50:53+08:00
+#
+# See https://fly.io/docs/reference/configuration/ for information about how to use this file.
+#
+
+app = 'sangraj-restore'
+primary_region = 'syd'
+
+[build]
+  image = 'sangraj/restore:latest'
+
+[env]
+  ASPNETCORE_URLS="https://+:8080"
+  StripeSettings__PublishableKey="pk_test_51Pl13VEzCvUNMqwqsa1yUdZ9jlFnJwN1YLipMLls694HLVav7gwoRPK9BaKQ6jdirSEk0Qx2ORe8afMD7GdxphEZ00ZpouOMd5"
+
+[http_service]
+  internal_port = 8080
+  force_https = true
+  auto_stop_machines = 'stop'
+  auto_start_machines = true
+  min_machines_running = 0
+  processes = ['app']
+
+[[vm]]
+  memory = '1gb'
+  cpu_kind = 'shared'
+  cpus = 1
