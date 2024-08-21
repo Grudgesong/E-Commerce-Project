@@ -6,7 +6,7 @@ State-Management-  Redux
 
 Styling-				    Material- UI
 
-Back-End-			    C#, .Net Core
+Back-End-			    ASP.NET Core
 
 Data Management-		Entity Framework
 
