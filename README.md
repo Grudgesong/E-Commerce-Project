@@ -1,4 +1,3 @@
-I developed a e-commerce application leveraging a modern tech stack to deliver a seamless and efficient user experience. 
 
 Front End-			    ReactJs, TypeScript
 
